@@ -1,16 +1,47 @@
-# React + Vite
+# Job Portal UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A React frontend for the Job Portal. Candidates search and apply for jobs and track their applications. Employers post jobs, review applicants and change their status.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Login and register with JWT authentication
+- Role-based navigation and protected routes (Candidate, Employer)
+- Job search by keyword, location and job type, with pagination
+- Apply for jobs, with the button changing to "Applied"
+- Candidate dashboard: jobs available, applied, shortlisted and rejected counts, plus an applications table
+- Employer dashboard: total jobs, applicants, shortlisted and rejected counts per job
+- Manage page: add companies, post jobs, view applicants and update their status
 
-## React Compiler
+## Tech stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+React, Vite, Tailwind CSS, Axios, React Router, Lucide icons
 
-## Expanding the Oxlint configuration
+## Screenshots
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+![Jobs](docs/jobs.png)
+
+![Candidate dashboard](docs/candidate-dashboard.png)
+
+![Employer dashboard](docs/employer-dashboard.png)
+
+![Manage](docs/manage.png)
+
+## Backend
+
+This app needs the backend running on port 8080:
+[github.com/teja0093/job-portal-api](https://github.com/teja0093/job-portal-api)
+
+## Setup
+
+```bash
+npm install
+npm run dev
+```
+
+Open http://localhost:5173
+
+The API URL is set in `src/api.js` (`http://localhost:8080/api`).
+
+## Author
+
+Bonu Tejeswara Rao, [GitHub](https://github.com/teja0093)
